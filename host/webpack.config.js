@@ -37,11 +37,11 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'host',
       remotes: {
-        remote1: 'remote1@http://localhost:3001/mf-manifest.json',
-        // remote2: 'remote2@http://localhost:3002/mf-manifest.json',
+        // remote1: 'remote1@http://localhost:3001/mf-manifest.json',
+        remote2: 'remote2@http://localhost:3002/mf-manifest.json',
       },
-      dev: true,
-      dts: true,
+      // dev: true,
+      // dts: true,
       shared: {
         react: {
             singleton: true,

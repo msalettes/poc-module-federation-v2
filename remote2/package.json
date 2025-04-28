@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack-cli serve",
+    "dev": "FEDERATION_DEBUG=true NODE_ENV=development webpack-cli serve",
     "build": "webpack --mode production",
     "preview": "serve dist -p 3002",
     "dev:rspack": "rsbuild dev",
