@@ -40,8 +40,14 @@ module.exports = {
         // remote1: 'remote1@http://localhost:3001/mf-manifest.json',
         remote2: 'remote2@http://localhost:3002/mf-manifest.json',
       },
-      // dev: true,
-      // dts: true,
+      dev: true,
+      dts: {
+        consumeTypes: true,
+      },
+      runtimePlugins: [
+        "./node_modules/@module-federation/dts-plugin/dist/dynamic-remote-type-hints-plugin.js",
+        // DynamicRemoteTypeHintsPlugin,
+      ],
       shared: {
         react: {
             singleton: true,
@@ -59,5 +65,7 @@ module.exports = {
       favicon: './public/favicon.ico',
     }),
   ],
-
+  watchOptions : {
+    ignored: ['**/node_modules/**', '**/@mf-types/**'],
+  }
 };
