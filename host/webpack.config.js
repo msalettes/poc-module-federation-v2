@@ -44,10 +44,9 @@ module.exports = {
       dts: {
         consumeTypes: true,
       },
-      runtimePlugins: [
-        "./node_modules/@module-federation/dts-plugin/dist/dynamic-remote-type-hints-plugin.js",
-        // DynamicRemoteTypeHintsPlugin,
-      ],
+      // runtimePlugins: [
+      //   "./node_modules/@module-federation/dts-plugin/dist/dynamic-remote-type-hints-plugin.js",
+      // ],
       shared: {
         react: {
             singleton: true,
@@ -58,7 +57,6 @@ module.exports = {
             requiredVersion: '^18.3.1',
         },
       },
-      // implementation: require.resolve('@module-federation/runtime-tools'),
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
